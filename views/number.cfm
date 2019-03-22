@@ -5,6 +5,7 @@
 <cfparam name="args.value" default="">
 <cfparam name="args.min" default="">
 <cfparam name="args.max" default="">
+<cfparam name="args.step" default="">
 <cfparam name="args.fieldDescription" default="">
 
 <cfoutput>
@@ -22,6 +23,9 @@
 			</cfif>
 			<cfif isNumeric( args.max )>
 				max="#args.max#"
+			</cfif>
+			<cfif isNumeric( args.step )>
+				step="#args.step#"
 			</cfif>
 			class="form-control"/>
 		<cfif len( args.fieldDescription )>
